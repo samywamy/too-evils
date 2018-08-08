@@ -16,9 +16,10 @@ class QuestionsTest < ApplicationSystemTestCase
 
     fill_in "Answer 1", with: @question.answer_1
     fill_in "Answer 2", with: @question.answer_2
+    fill_in "Question Votes", with: @question.question_votes
     fill_in "User", with: @question.user_id
-    fill_in "Votes 1", with: @question.votes_1
-    fill_in "Votes 2", with: @question.votes_2
+    fill_in "Votes Answer 1", with: @question.votes_answer_1
+    fill_in "Votes Answer 2", with: @question.votes_answer_2
     click_on "Create Question"
 
     assert_text "Question was successfully created"
@@ -31,9 +32,10 @@ class QuestionsTest < ApplicationSystemTestCase
 
     fill_in "Answer 1", with: @question.answer_1
     fill_in "Answer 2", with: @question.answer_2
+    fill_in "Question Votes", with: @question.question_votes
     fill_in "User", with: @question.user_id
-    fill_in "Votes 1", with: @question.votes_1
-    fill_in "Votes 2", with: @question.votes_2
+    fill_in "Votes Answer 1", with: @question.votes_answer_1
+    fill_in "Votes Answer 2", with: @question.votes_answer_2
     click_on "Update Question"
 
     assert_text "Question was successfully updated"

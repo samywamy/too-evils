@@ -3,13 +3,15 @@
 one:
   answer_1: MyText
   answer_2: MyText
-  votes_1: 1
-  votes_2: 1
+  votes_answer_1: 1
+  votes_answer_2: 1
+  question_votes: 1
   user: one
 
 two:
   answer_1: MyText
   answer_2: MyText
-  votes_1: 1
-  votes_2: 1
+  votes_answer_1: 1
+  votes_answer_2: 1
+  question_votes: 1
   user: two
