@@ -6,9 +6,11 @@ class QuestionsController < ApplicationController
   # GET /questions.json
   def index
     if params.has_key?(:user_id)
-      @questions = Question.where(user_id: params[:user_id])
+        @username = User.where(id: params[:user_id]).first.email
+        @questions = Question.where(user_id: params[:user_id])
+        render :user_questions
     else
-      @questions = Question.all
+        @questions = Question.all
     end  
   end
 
