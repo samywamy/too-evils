@@ -4,9 +4,11 @@ class Answer extends React.Component {
   render () {
     return (
       <React.Fragment>
-        Answer: {this.props.answer}
-        Votes: {this.props.votes}
-        Percentage: {this.props.percentage}
+        <div>
+          Answer: {this.props.answer}
+          Votes: {this.props.votes}
+          Percentage: {this.props.percentage}
+        </div>  
       </React.Fragment>
     );
   }
