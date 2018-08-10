@@ -40,6 +40,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise'
 gem 'jquery-rails'
 gem 'webpacker'
+gem 'react-rails'
 
 # Use Bootstrap
 gem 'bootstrap'
