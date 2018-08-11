@@ -4,7 +4,7 @@ class Answer extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <div>
+        <div onClick={this.props.voteHandler}>
           Answer: {this.props.answer}
           Votes: {this.props.votes}
           Percentage: {this.props.percentage}
