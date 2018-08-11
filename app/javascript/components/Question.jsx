@@ -13,8 +13,8 @@ class Question extends React.Component {
   calculatePercentages() {
     const total = this.state.votes_answer_1 + this.state.votes_answer_2;
     if (total > 0) {
-      this.state.percentage_1 = this.state.votes_answer_1 * 100 / total;
-      this.state.percentage_2 = this.state.votes_answer_2 * 100 / total;
+      this.state.percentage_1 = Math.round(this.state.votes_answer_1 * 100 / total) + '%';
+      this.state.percentage_2 = Math.round(this.state.votes_answer_2 * 100 / total) + '%';
     } else {
       this.state.percentage_1 = 0;
       this.state.percentage_2 = 0;
