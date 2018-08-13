@@ -1,5 +1,4 @@
 class VotesController < ApplicationController
-
     before_action :authenticate_user!, :except => [ :register_vote ]
 
     def register_vote
