@@ -1,3 +1,32 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.index-container {
+    margin-top: 50px;
+    height: 80vh;
+    // display: flex;
+    // justify-content: center;
+    text-align: center;
+    // vertical-align: middle;
+}
+
+.q {
+    margin: 0 auto;
+    // text-align: center;
+    padding: 40px;
+}
+
+.q-row {
+
+}
+
+.ans-1 {
+    padding: 100px;
+    border: 1px solid red;
+}
+
+.ans-2 {
+    padding: 100px;
+    border: 1px solid dodgerblue;
+}
