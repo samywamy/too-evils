@@ -6,6 +6,7 @@ class Question extends React.Component {
   constructor(props) {
     super();
     this.state = props.question;
+    this.state.answered = false;
     this.calculatePercentages();
     this.handleVote = this.handleVote.bind(this);
   }
@@ -28,6 +29,7 @@ class Question extends React.Component {
       .then(
         (result) => {
           let currentState = this.state;
+          currentState.answered = true;
           currentState.votes_answer_1 = result.votes_answer_1;
           currentState.votes_answer_2 = result.votes_answer_2;
           this.calculatePercentages();
@@ -57,11 +59,11 @@ class Question extends React.Component {
 
         <div class="row q-row">
         <div class="col">
-        <Answer answer={this.state.answer_1} votes={this.state.votes_answer_1} percentage={this.state.percentage_1} voteHandler={event => this.handleVote(1)} leftAnswer="true" />
+        <Answer answer={this.state.answer_1} votes={this.state.votes_answer_1} percentage={this.state.percentage_1} voteHandler={event => this.handleVote(1)} leftAnswer={true} answered={this.state.answered} />
         </div>
 
         <div class="col">
-        <Answer answer={this.state.answer_2} votes={this.state.votes_answer_2} percentage={this.state.percentage_2} voteHandler={event => this.handleVote(2)} leftAnswer="false" />
+        <Answer answer={this.state.answer_2} votes={this.state.votes_answer_2} percentage={this.state.percentage_2} voteHandler={event => this.handleVote(2)} leftAnswer={false} answered={this.state.answered} />
         </div>
 
         </div>
