@@ -48,10 +48,26 @@ class Question extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <h1> would you rather... </h1>
-        <Answer answer={this.state.answer_1} votes={this.state.votes_answer_1} percentage={this.state.percentage_1} voteHandler={event => this.handleVote(1)} />
-        <h1> orrrrr....... </h1>
-        <Answer answer={this.state.answer_2} votes={this.state.votes_answer_2} percentage={this.state.percentage_2} voteHandler={event => this.handleVote(2)} />
+
+        <div class="container index-container">
+
+        <div class="row">
+        <h4 class="q">Would you rather...</h4>
+        </div>
+
+        <div class="row q-row">
+        <div class="col">
+        <Answer answer={this.state.answer_1} votes={this.state.votes_answer_1} percentage={this.state.percentage_1} voteHandler={event => this.handleVote(1)} leftAnswer="true" />
+        </div>
+
+        <div class="col">
+        <Answer answer={this.state.answer_2} votes={this.state.votes_answer_2} percentage={this.state.percentage_2} voteHandler={event => this.handleVote(2)} leftAnswer="false" />
+        </div>
+
+        </div>
+        </div>
+
+
       </React.Fragment>
     );
   }
