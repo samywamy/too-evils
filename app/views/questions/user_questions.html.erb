@@ -1,34 +1,38 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <%= link_to 'New Question', new_question_path %>
+    <p id="notice"><%= notice %></p>
+  </div>
 
-<h1>Questions by <%= @username %></h1>
+  <div class="row">
+    <h1>Questions by <%= @username %></h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Answer 1</th>
-      <th>Answer 2</th>
-      <th>Votes answer 1</th>
-      <th>Votes answer 2</th>
-      <th>Question votes</th>
-    </tr>
-  </thead>
+    <table>
+      <thead>
+        <tr>
+          <th>Answer 1</th>
+          <th>Answer 2</th>
+          <th>Votes answer 1</th>
+          <th>Votes answer 2</th>
+          <th>Question votes</th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @questions.each do |question| %>
-      <tr>
-        <td><%= question.answer_1 %></td>
-        <td><%= question.answer_2 %></td>
-        <td><%= question.votes_answer_1 %></td>
-        <td><%= question.votes_answer_2 %></td>
-        <td><%= question.question_votes %></td>
-        <td><%= link_to 'Show', question %></td>
-        <td><%= link_to 'Edit', edit_question_path(question) %></td>
-        <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <tbody>
+        <% @questions.each do |question| %>
+          <tr>
+            <td><%= question.answer_1 %></td>
+            <td><%= question.answer_2 %></td>
+            <td><%= question.votes_answer_1 %></td>
+            <td><%= question.votes_answer_2 %></td>
+            <td><%= question.question_votes %></td>
+            <td><%= link_to 'Show', question %></td>
+            <td><%= link_to 'Edit', edit_question_path(question) %></td>
+            <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
 
-<br>
-
-<%= link_to 'New Question', new_question_path %>
+  </div>
+</div>
