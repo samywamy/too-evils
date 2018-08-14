@@ -1,5 +1,10 @@
-<p id="notice"><%= notice %></p>
-
+<div class="container">
 <h1>Upvote questions</h1>
 
-<%= react_component("Upvote", { votees: @qs, max_votes: @max_votes }) %>
+<table class="table table-hover">
+
+    <tr><%= react_component("Upvote", { votees: @qs, max_votes: @max_votes }) %></tr>
+
+</table>
+
+</div>
