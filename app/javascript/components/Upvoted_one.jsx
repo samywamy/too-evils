@@ -36,7 +36,7 @@ class UpvotedOne extends React.Component {
           return (
             <React.Fragment>
                 <div> 
-                  <p>Would you rather "{this.props.ans_1}" or "{this.props.ans_2}"? Has been voted on {this.state.q_votes} times <button onClick={this.handleVote} type="button" className="btn btn-outline-danger btn-sm">Vote</button></p>
+                  <p>Would you rather "{this.props.ans_1}" or "{this.props.ans_2}"? {this.state.q_votes} votes <button onClick={this.handleVote} type="button" className="btn btn-outline-danger btn-sm">Vote</button></p>
                 </div>
             </React.Fragment>
           );
