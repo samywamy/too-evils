@@ -35,9 +35,7 @@ class Question extends React.Component {
           this.calculatePercentages();
           this.setState(currentState);
         },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
+
         (error) => {
           this.setState({
             isLoaded: true,
@@ -51,22 +49,13 @@ class Question extends React.Component {
     return (
       <React.Fragment>
 
-        <div className="container index-container">
 
-        <div className="row">
-        <h4 className="q">Would you rather...</h4>
-        </div>
-
-        <div className="row q-row">
         <div className="col">
-        <Answer answer={this.state.answer_1} votes={this.state.votes_answer_1} percentage={this.state.percentage_1} voteHandler={event => this.handleVote(1)} leftAnswer={true} answered={this.state.answered} />
+            <Answer answer={this.state.answer_1} votes={this.state.votes_answer_1} percentage={this.state.percentage_1} voteHandler={event => this.handleVote(1)} leftAnswer={true} answered={this.state.answered} />
         </div>
 
         <div className="col">
-        <Answer answer={this.state.answer_2} votes={this.state.votes_answer_2} percentage={this.state.percentage_2} voteHandler={event => this.handleVote(2)} leftAnswer={false} answered={this.state.answered} />
-        </div>
-
-        </div>
+            <Answer answer={this.state.answer_2} votes={this.state.votes_answer_2} percentage={this.state.percentage_2} voteHandler={event => this.handleVote(2)} leftAnswer={false} answered={this.state.answered} />
         </div>
 
 
