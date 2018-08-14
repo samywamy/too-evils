@@ -10,7 +10,7 @@ class VotesController < ApplicationController
             else
                 q.update(votes_answer_2: q.votes_answer_2 + 1)
             end
-        elsif (current_user.id)
+        elsif current_user
             q.update(question_votes: q.question_votes + 1)
         end
         render json: q

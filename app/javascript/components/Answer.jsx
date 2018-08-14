@@ -27,13 +27,13 @@ class Answer extends React.Component {
           </div>  
         </React.Fragment>
       );
-      }
+    }
   }
 }
 
 Answer.propTypes = {
   answer: PropTypes.string,
-  votes: PropTypes.string,
+  votes: PropTypes.number,
   percentage: PropTypes.string,
   leftAnswer: PropTypes.bool,
   answered: PropTypes.bool

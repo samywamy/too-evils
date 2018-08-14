@@ -11,7 +11,7 @@ class UpvotedOne extends React.Component {
     }
 
     handleVote() {
-        fetch('/vote/' + this.props.q_id)
+        fetch('/vote/' + this.props.q_id, {credentials: 'same-origin'})
         .then(res => res.json())
         .then(
           (result) => {

@@ -7,7 +7,7 @@ class Upvote extends React.Component {
     render () {
       return (
         <React.Fragment>
-      {this.props.votees.map(q => { return ( <UpvotedOne ans_1={q.answer_1} ans_2={q.answer_2} q_id={q.id} q_votes={q.question_votes} max_votes={this.props.max_votes}/>); } )}
+      {this.props.votees.map(q => { return ( <UpvotedOne key={q.id} ans_1={q.answer_1} ans_2={q.answer_2} q_id={q.id} q_votes={q.question_votes} max_votes={this.props.max_votes}/>); } )}
         </React.Fragment>
       );
     }
