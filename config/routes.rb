@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resources :questions
   end
 
+  get '/profile', to: 'user#profile'
   get '/vote/:question_id/:voted_answer', to: 'votes#register_vote'
   get '/vote/:question_id', to: 'votes#register_vote'
   

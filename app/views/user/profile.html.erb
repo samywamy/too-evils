@@ -1,0 +1,48 @@
+<div class="container">
+
+
+
+  <div class="row">
+      
+  <%= render :partial => '/questions/form', :locals => {:question => @question} %>
+
+  </div>
+
+
+
+
+  <div class="row">
+    <h2>Questions by <%= @username %></h2>
+  </div>
+
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Answer 1</th>
+          <th>Votes</th>
+          <th>Answer 2</th>
+          <th>Votes</th>
+          <th>Total votes</th>
+          <th>Upvote count</th>
+          <th colspan="2"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @questions.each do |question| %>
+          <tr>
+            <td><%= question.answer_1 %></td>
+            <td><%= question.votes_answer_1 %></td>
+            <td><%= question.answer_2 %></td>
+            <td><%= question.votes_answer_2 %></td>
+            <td><%= question.votes_answer_1 + question.votes_answer_2 %></td>
+            <td><%= if question.question_votes < 10; question.question_votes; else; ''; end; %></td>
+            <td><%= link_to 'Edit', edit_question_path(question) %></td>
+            <td><%= link_to 'Delete', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+
+</div>
