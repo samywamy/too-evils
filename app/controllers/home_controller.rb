@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 
 	def index
-		@q = Question.first
+		@maxId = Question.maximum(:id)
 	end
 end
