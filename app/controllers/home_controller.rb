@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
+    include Constants
 
 	def index
-		@maxId = Question.maximum(:id)
+        @q_arr = Question.where('question_votes >= ?', MIN_VOTES).pluck(:id).shuffle
 	end
 end

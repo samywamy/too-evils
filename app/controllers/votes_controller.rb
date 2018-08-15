@@ -1,5 +1,6 @@
 class VotesController < ApplicationController
     before_action :authenticate_user!, :except => [ :register_vote ]
+    include Constants
 
     def register_vote
         q = Question.find(params[:question_id]) # get the row from id of question being played
@@ -17,7 +18,7 @@ class VotesController < ApplicationController
     end
     
     def upvote_questions
-        @max_votes = 10
+        @max_votes = MIN_VOTES
         @qs = Question.where('question_votes < ?', @max_votes).order(question_votes: :desc)
         
     end    

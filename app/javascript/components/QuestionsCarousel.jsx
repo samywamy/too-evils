@@ -6,8 +6,8 @@ class QuestionsCarousel extends React.Component {
     constructor(props) {
         super();
         this.state = {};
-        this.state.maxId = props.maxId;
-        this.state.usedIds = [];
+        this.state.qArr = props.qArr;
+        this.state.idx = 0;
         this.state.message = 'Loading...';
         this.fetchNextQuestion = this.fetchNextQuestion.bind(this);
     }
@@ -19,14 +19,14 @@ class QuestionsCarousel extends React.Component {
                 (result) => {
                     let currentState = this.state;
                     currentState.question = result;
-                    currentState.usedIds.push(id);    
+                    currentState.idx = currentState.idx + 1;    
                     this.setState(currentState);
                 },
 
                 (error) => {
                     let currentState = this.state;
                     currentState.question = undefined;
-                    currentState.usedIds.push(id);    
+                    currentState.idx = currentState.idx + 1;    
                     currentState.message = 'oops, try again....';
                     this.setState(currentState);
                 }
@@ -34,12 +34,8 @@ class QuestionsCarousel extends React.Component {
     }
 
     fetchNextQuestion() {
-        if (this.state.maxId > 0 && this.state.usedIds.length < this.state.maxId) {
-            let randomId =  Math.floor(Math.random()*this.state.maxId + 1);
-            while (this.state.usedIds.includes(randomId)) {
-                randomId =  Math.floor(Math.random()*this.state.maxId + 1);
-            }
-            this.fetchNewQuestion(randomId);
+        if (this.state.idx < this.state.qArr.length) {
+            this.fetchNewQuestion(this.state.qArr[this.state.idx]);
         } else {
             let currentState = this.state;
             currentState.question = undefined;
@@ -55,7 +51,7 @@ class QuestionsCarousel extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div className="container index-container">
+                <div className="container-flex">
 
                     <div className="row">
                         <h4 className="q">Would you rather...</h4>
@@ -66,7 +62,7 @@ class QuestionsCarousel extends React.Component {
                     </div>
 
                     <div className="row">
-                        <button onClick={this.fetchNextQuestion}>></button>
+                        <button id="next" onClick={this.fetchNextQuestion}>></button>
                     </div>
                 </div>
             </React.Fragment>
@@ -75,6 +71,6 @@ class QuestionsCarousel extends React.Component {
 }
 
 QuestionsCarousel.propTypes = {
-    maxId: PropTypes.number
+    qArr: PropTypes.array
 };
 export default QuestionsCarousel
