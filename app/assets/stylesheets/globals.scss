@@ -1,27 +1,39 @@
-// html {
-//     height: 100%;
-//  }
- 
-//  body {
-//     min-height: 100%;
-//  }
+body {
+    font-family: 'Montserrat', sans-serif;
+}
 
 .nav {
+    background-color: #f2f2f2;
     height: 50px;
-    line-height: 50px;
+    line-height: 30px;
     padding: 0 20px 0 20px;
 }
 
+.nav-link {
+    color: #7c7c7c;
+    font-size: 15px;
+}
+
 .container {
-    // margin: 0 auto;
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .row {
 
 }
 
+.new-q-form {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 800px;
+}
+
 tr, th, td {
     padding: 10px 20px 10px 15px;
 }
 
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+}

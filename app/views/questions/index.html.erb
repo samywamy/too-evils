@@ -10,7 +10,6 @@
       <th>Votes answer 1</th>
       <th>Votes answer 2</th>
       <th>Question votes</th>
-      <th>User</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,7 +22,6 @@
         <td><%= question.votes_answer_1 %></td>
         <td><%= question.votes_answer_2 %></td>
         <td><%= question.question_votes %></td>
-        <td><%= question.user %></td>
         <td><%= link_to 'Show', question %></td>
         <td><%= link_to 'Edit', edit_question_path(question) %></td>
         <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>

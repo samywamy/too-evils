@@ -15,8 +15,8 @@ class Answer extends React.Component {
                 <React.Fragment>
                     <div className={answerStyling}>
                         <p>{this.props.answer}</p>
-                        <p>{this.props.percentage}</p>
-                        <p>{this.props.votes} votes</p>
+                        <p id="percentage">{this.props.percentage}</p>
+                        <p id="a-votes">{this.props.votes} votes</p>
                     </div>
                 </React.Fragment>
             );

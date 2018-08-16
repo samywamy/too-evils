@@ -42,7 +42,8 @@ gem 'jquery-rails'
 gem 'webpacker'
 gem 'react-rails'
 
-# Use Bootstrap
+# Use Materialize
+gem 'materialize-sass'
 gem 'bootstrap'
 
 group :development, :test do

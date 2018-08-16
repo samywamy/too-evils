@@ -51,10 +51,10 @@ class QuestionsCarousel extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div className="container-flex">
+                <div className="container">
 
-                    <div className="row">
-                        <h4 className="q">Would you rather...</h4>
+                    <div className="row title">
+                        <div className="q">WOULD YOU RATHER</div>
                     </div>
 
                     <div className="row q-row">
@@ -62,7 +62,7 @@ class QuestionsCarousel extends React.Component {
                     </div>
 
                     <div className="row">
-                        <button id="next" onClick={this.fetchNextQuestion}>></button>
+                        <button id="next" class="btn btn-link" onClick={this.fetchNextQuestion}>></button>
                     </div>
                 </div>
             </React.Fragment>

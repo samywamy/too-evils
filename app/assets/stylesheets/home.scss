@@ -2,31 +2,63 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.index-container {
-    margin-top: 50px;
-    height: 80vh;
-    // display: flex;
-    // justify-content: center;
-    text-align: center;
-    // vertical-align: middle;
+.title {
+    
 }
 
 .q {
     margin: 0 auto;
-    // text-align: center;
-    padding: 40px;
+    color: #4c4c4c;
+    font-weight: 500;
+    padding: 20px;
 }
 
-.q-row {
+.row {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
 
+.col-ans-1 {
+    width: 100%;
+    background-color: red;
+}
+
+.col-ans-2 {
+    width: 100%;
+}
+
+#next {
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: 65px;
+    color: black;
 }
 
 .ans-1 {
-    padding: 100px;
-    border: 1px solid red;
+    // padding: 100px;
+    height: 320px;
+    font-size: 40px;
+    color: white;
+    border: 5px solid red;
+    width: 100%;
+    background-color: rgb(186, 16, 16);
 }
 
 .ans-2 {
-    padding: 100px;
-    border: 1px solid dodgerblue;
+    // padding: 100px;
+    height: 320px;
+    font-size: 40px;
+    color: white;
+    border: 5px solid dodgerblue;
+    width: 100%;
+    background-color: #0068ba;
+}
+
+#a-votes {
+    font-size: 16px;
+}
+
+#percentage {
+    font-size: 80px;
 }
