@@ -9,6 +9,7 @@
 .q {
     margin: 0 auto;
     color: #4c4c4c;
+    font-size: 20px;
     font-weight: 500;
     padding: 20px;
 }
@@ -33,6 +34,7 @@
     margin-top: 20px;
     font-size: 65px;
     color: black;
+    text-decoration: none;
 }
 
 .ans-1 {
@@ -43,6 +45,7 @@
     border: 5px solid red;
     width: 100%;
     background-color: rgb(186, 16, 16);
+    padding: 20px;
 }
 
 .ans-2 {
@@ -53,6 +56,7 @@
     border: 5px solid dodgerblue;
     width: 100%;
     background-color: #0068ba;
+    padding: 20px;
 }
 
 #a-votes {
@@ -60,5 +64,5 @@
 }
 
 #percentage {
-    font-size: 80px;
+    font-size: 70px;
 }

@@ -14,9 +14,9 @@ class Answer extends React.Component {
             return (
                 <React.Fragment>
                     <div className={answerStyling}>
-                        <p>{this.props.answer}</p>
-                        <p id="percentage">{this.props.percentage}</p>
-                        <p id="a-votes">{this.props.votes} votes</p>
+                        <div>{this.props.answer}</div>
+                        <div id="percentage">{this.props.percentage}</div>
+                        <div id="a-votes">{this.props.votes} votes</div>
                     </div>
                 </React.Fragment>
             );

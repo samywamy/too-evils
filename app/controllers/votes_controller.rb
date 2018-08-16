@@ -13,14 +13,15 @@ class VotesController < ApplicationController
             end
         elsif current_user
             q.update(question_votes: q.question_votes + 1)
+            user = User.find(current_user.id)
+            q.user << user
         end
         render json: q
     end
     
     def upvote_questions
         @max_votes = MIN_VOTES
-        @qs = Question.where('question_votes < ?', @max_votes).order(question_votes: :desc)
-        
+        @qs = Question.where('question_votes < ?', @max_votes).order(question_votes: :desc).reject { |q| (q.user.index { |u| u.id == current_user.id } != nil) }
     end    
 
 end

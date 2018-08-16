@@ -1,21 +1,41 @@
 <ul class="nav justify-content-end">
 
-  <li class="nav-item">
-    <a class="nav-link" href="#"><button type="button" class="btn btn-outline-primary">
-    Submit Question</button></a>
-  </li>
+    <li class="nav-item">
+        <a class="nav-link" href="<%= profile_path %>"><button type="button" class="btn btn-outline-primary btn-sm">
+        Submit Question</button></a>
+    </li>
 
-  <li class="nav-item">
-    <%= link_to 'Upvote', new_user_registration_path , class: "nav-link" %>
-  </li>  
 
-  <li class="nav-item">
-    <%= link_to 'Join', new_user_registration_path , class: "nav-link" %>
-  </li>
+    <li class="nav-item">
+        <%= link_to 'Home', root_path , class: "nav-link" %>
+    </li> 
 
-  <li class="nav-item">
-  <%= link_to 'Login', user_session_path , class: "nav-link" %>
-  </li>
+
+    <li class="nav-item">
+        <%= link_to 'Upvote', questions_vote_path , class: "nav-link" %>
+    </li>  
+
+
+    <% if user_signed_in? %>
+
+    <li class="nav-item">
+        <%= link_to 'Profile', profile_path , class: "nav-link" %>
+    </li>
+
+    <li class="nav-item">
+        <%= link_to 'Sign Out', destroy_user_session_url, class: "nav-link" %>
+    </li>
+
+    <% else %>
+    <li class="nav-item">
+        <%= link_to 'Join', new_user_registration_path , class: "nav-link" %>
+    </li>
+
+    <li class="nav-item">
+        <%= link_to 'Login', user_session_path , class: "nav-link" %>
+    </li>
+
+    <% end %>
 
 </ul>
 

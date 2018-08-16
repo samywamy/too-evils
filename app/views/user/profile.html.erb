@@ -1,11 +1,12 @@
 <div class="container">
 
-<div class="new-q-form">
   <div class="row">
-    <%= render :partial => '/questions/form', :locals => {:question => @question} %>
-  <p id="notice"><%= notice %></p>
+    <div id="new-q-form"><%= render :partial => '/questions/form', :locals => {:question => @question} %>
+    <br>
+    <p id="notice"><%= notice %></p>
+    </div>
   </div>
-</div>
+
 
   <div class="row">
     <h2>My Questions</h2>
