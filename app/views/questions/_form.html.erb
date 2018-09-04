@@ -11,22 +11,23 @@
     </div>
   <% end %>
 
-  <form>
-  <div class="form-row">
-  <div class="field col">
-    <%= form.label :answer_1 %>
-    <%= form.text_area :answer_1, class: "form-control" %>
-  </div>
 
-  <div class="field col">
-    <%= form.label :answer_2 %>
-    <%= form.text_area :answer_2, class: "form-control" %>
+  <div class="form-row">
+    <div class="field col">
+        <%= form.label :answer_1 %>
+        <%= form.text_area :answer_1, class: "form-control" %>
+    </div>
+
+    <div class="field col">
+        <%= form.label :answer_2 %>
+        <%= form.text_area :answer_2, class: "form-control" %>
+    </div>
   </div>
-  </div>
+  
   <br>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-outline-secondary" %>
   </div>
-  </form>
+
 
 <% end %>
